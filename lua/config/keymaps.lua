@@ -33,4 +33,4 @@ map("n", "dw", 'vb"_d', opts)
 map("n", "<C-a>", "gg<S-v>G", opts)
 
 -- Toggle line numbers
-map("n", "<leader>n", ":set number!<cr>", opts)
+map("n", "<leader>ln", ":set number!<cr>", opts)
