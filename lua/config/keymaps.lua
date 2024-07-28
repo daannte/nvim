@@ -11,6 +11,12 @@ map("n", "<leader>sv", ":vsplit<cr>", opts) -- Vertical split
 map("n", "<leader>sx", ":close<cr>", opts) -- Close current split
 map("n", "<leader>se", "<C-w>=<cr>", opts) -- Resize equally
 
+-- Window navigation
+map("n", "<C-j>", "<C-w>j", opts)
+map("n", "<C-k>", "<C-w>k", opts)
+map("n", "<C-l>", "<C-w>l", opts)
+map("n", "<C-h>", "<C-w>h", opts)
+
 -- Buffer Manipulation
 map("n", "<Tab>", ":bnext<cr>", opts) -- Switch to next buffer
 map("n", "<S-Tab>", ":bprev<cr>", opts) -- Switch to previous buffer
@@ -31,6 +37,3 @@ map("n", "dw", 'vb"_d', opts)
 
 -- Select All
 map("n", "<C-a>", "gg<S-v>G", opts)
-
--- Toggle line numbers
-map("n", "<leader>ln", ":set number!<cr>", opts)

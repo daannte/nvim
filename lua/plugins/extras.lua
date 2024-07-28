@@ -43,10 +43,6 @@ return {
 	},
 	{
 		"folke/ts-comments.nvim",
-		keys = {
-			{ "gcc", mode = "n", desc = "Toggle Comment" },
-			{ "gc", mode = "v", desc = "Toggle Comment (Visual Mode)" },
-		},
 		opts = {},
 	},
 }
