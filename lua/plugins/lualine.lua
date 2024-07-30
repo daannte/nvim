@@ -1,6 +1,6 @@
 return {
 	"nvim-lualine/lualine.nvim",
-	event = "VeryLazy",
+	event = "BufRead",
 	config = function()
 		local custom_theme = require("lualine.themes.everforest")
 		custom_theme.normal.c.bg = nil
