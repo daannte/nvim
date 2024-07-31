@@ -337,6 +337,7 @@ return {
 			require("rose-pine").setup({
 				styles = {
 					bold = false,
+					italic = false,
 				},
 				highlight_groups = {
 					Normal = { bg = "#191724" },
