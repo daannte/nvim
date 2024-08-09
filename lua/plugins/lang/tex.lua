@@ -1,7 +1,5 @@
 return {
 	ft = { "tex", "plaintex", "bib" },
-	root = { ".latexmkrc", ".texlabroot", "texlabroot", "Tectonic.toml" },
-
 	-- Add BibTeX/LaTeX to treesitter
 	{
 		"nvim-treesitter/nvim-treesitter",
@@ -20,6 +18,7 @@ return {
 
 	{
 		"lervag/vimtex",
+		ft = "tex",
 		config = function()
 			vim.g.vimtex_mappings_disable = { ["n"] = { "K" } } -- disable `K` as it conflicts with LSP hover
 			vim.g.vimtex_quickfix_method = vim.fn.executable("pplatex") == 1 and "pplatex" or "latexlog"
@@ -29,7 +28,7 @@ return {
 			vim.g.vimtex_quickfix_mode = 0
 		end,
 		keys = {
-			{ "<localLeader>l", "", desc = "+vimtext" },
+			{ "<leader>l", "", desc = "+vimtext" },
 			{ "<leader>za", ":!zathura %:r.pdf &<cr>", desc = "Open current tex file as pdf", silent = true },
 		},
 	},

@@ -12,10 +12,10 @@ map("n", "<leader>sx", ":close<cr>", opts) -- Close current split
 map("n", "<leader>se", "<C-w>=<cr>", opts) -- Resize equally
 
 -- Window navigation
-map("n", "<C-j>", "<C-w>j", opts)
-map("n", "<C-k>", "<C-w>k", opts)
-map("n", "<C-l>", "<C-w>l", opts)
-map("n", "<C-h>", "<C-w>h", opts)
+map("n", "sj", "<C-w>j", opts)
+map("n", "sk", "<C-w>k", opts)
+map("n", "sl", "<C-w>l", opts)
+map("n", "sh", "<C-w>h", opts)
 
 -- Buffer Manipulation
 map("n", "<Tab>", ":bnext<cr>", opts) -- Switch to next buffer

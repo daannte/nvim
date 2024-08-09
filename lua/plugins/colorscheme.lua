@@ -2,7 +2,7 @@ return {
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",
-		lazy = true,
+		lazy = false,
 		priority = 1000,
 		config = function()
 			require("catppuccin").setup({
@@ -331,7 +331,7 @@ return {
 	{
 		"rose-pine/neovim",
 		name = "rose-pine",
-		lazy = false,
+		lazy = true,
 		priority = 1000,
 		config = function()
 			require("rose-pine").setup({
