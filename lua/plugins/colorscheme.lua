@@ -1,7 +1,7 @@
-return {
+local themes = {
 	{
 		"catppuccin/nvim",
-		name = "catppuccin",
+		name = "gruvbox",
 		lazy = false,
 		priority = 1000,
 		config = function()
@@ -330,7 +330,7 @@ return {
 	},
 	{
 		"rose-pine/neovim",
-		name = "rose-pine",
+		name = "rose",
 		lazy = true,
 		priority = 1000,
 		config = function()
@@ -347,3 +347,15 @@ return {
 		end,
 	},
 }
+
+local theme = "gruvbox"
+
+for _, t in ipairs(themes) do
+	if t.name == theme then
+		t.lazy = false
+	else
+		t.lazy = true
+	end
+end
+
+return themes
