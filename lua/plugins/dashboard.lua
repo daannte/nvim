@@ -6,7 +6,7 @@ return {
 		require("mini.starter").setup({
 			items = {
 				{ action = "Telescope find_files", name = "Files", section = "" },
-				{ action = "lua MiniFiles.open()", name = "Browser", section = "" },
+				{ action = "NvimTreeToggle", name = "Browser", section = "" },
 				{ action = "qa!", name = "Quit", section = "" },
 			},
 			footer = "",
