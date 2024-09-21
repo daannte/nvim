@@ -137,7 +137,7 @@ return {
 			ensure_installed = {
 				"stylua",
 				"prettier",
-				-- "css-lsp",
+				"css-lsp",
 				"html-lsp",
 				"typescript-language-server",
 			},
