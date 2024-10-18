@@ -145,7 +145,6 @@ return {
 					def.document_config.on_new_config,
 					function(config, root_dir)
 						if cond(root_dir, config) then
-							print(server)
 							config.enabled = false
 						end
 					end
