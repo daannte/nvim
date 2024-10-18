@@ -126,6 +126,42 @@ return {
 					handlers = { setup },
 				})
 			end
+
+			local function get_config(server)
+				local configs = require("lspconfig.configs")
+				return rawget(configs, server)
+			end
+
+			local function is_enabled(server)
+				local c = get_config(server)
+				return c and c.enabled ~= false
+			end
+
+			local function disable(server, cond)
+				local util = require("lspconfig.util")
+				local def = get_config(server)
+				---@diagnostic disable-next-line: undefined-field
+				def.document_config.on_new_config = util.add_hook_before(
+					def.document_config.on_new_config,
+					function(config, root_dir)
+						if cond(root_dir, config) then
+							print(server)
+							config.enabled = false
+						end
+					end
+				)
+			end
+
+			if is_enabled("denols") and is_enabled("ts_ls") then
+				local is_deno = require("lspconfig.util").root_pattern("deno.json", "deno.jsonc")
+				disable("ts_ls", is_deno)
+				disable("denols", function(root_dir, config)
+					if not is_deno(root_dir) then
+						config.settings.deno.enable = false
+					end
+					return false
+				end)
+			end
 		end,
 	},
 	{
