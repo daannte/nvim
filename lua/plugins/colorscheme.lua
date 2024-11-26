@@ -1,8 +1,18 @@
 local themes = {
 	{
+		"RRethy/base16-nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			vim.cmd.colorscheme("base16-black-metal-gorgoroth")
+			-- Change comment colour
+			vim.api.nvim_set_hl(0, "TSComment", { fg = "#555555", gui = nil })
+		end,
+	},
+	{
 		"catppuccin/nvim",
 		name = "gruvbox",
-		lazy = false,
+		lazy = true,
 		priority = 1000,
 		config = function()
 			require("catppuccin").setup({
@@ -347,15 +357,5 @@ local themes = {
 		end,
 	},
 }
-
-local theme = "gruvbox"
-
-for _, t in ipairs(themes) do
-	if t.name == theme then
-		t.lazy = false
-	else
-		t.lazy = true
-	end
-end
 
 return themes

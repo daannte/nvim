@@ -2,7 +2,6 @@ return {
 	-- {
 	-- 	"hrsh7th/nvim-cmp",
 	-- 	version = false,
-	-- 	lazy = true,
 	-- 	event = "InsertEnter",
 	-- 	dependencies = {
 	-- 		"hrsh7th/cmp-nvim-lsp",
@@ -97,6 +96,22 @@ return {
 		event = "InsertEnter",
 		version = "v0.*",
 		opts = {
+			keymap = {
+				["<Tab>"] = {
+					function(cmp)
+						if cmp.is_in_snippet() then
+							return cmp.accept()
+						else
+							return cmp.select_and_accept()
+						end
+					end,
+					"snippet_forward",
+					"fallback",
+				},
+				["<C-p>"] = { "select_prev", "fallback" },
+				["<C-n>"] = { "select_next", "fallback" },
+				["<C-space>"] = { "show", "show_documentation", "hide_documentation" },
+			},
 			highlight = {
 				use_nvim_cmp_as_default = true,
 			},
