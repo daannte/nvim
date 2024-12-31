@@ -27,6 +27,9 @@ return {
 		event = "InsertEnter",
 		version = "v0.*",
 		opts = {
+			enabled = function()
+				return vim.bo.buftype == "" and vim.b.completion ~= false
+			end,
 			keymap = {
 				["<Tab>"] = {
 					function(cmp)
@@ -44,19 +47,21 @@ return {
 				["<C-n>"] = { "select_next", "fallback" },
 				["<C-space>"] = { "show", "show_documentation", "hide_documentation" },
 			},
-			highlight = {
-				use_nvim_cmp_as_default = true,
-			},
-			accept = { auto_brackets = { enabled = true } },
-
-			windows = {
-				autocomplete = {
+			completion = {
+				menu = {
 					border = "solid",
+					draw = {
+						treesitter = { "lsp" },
+					},
 				},
 				documentation = {
 					auto_show = true,
 					auto_show_delay_ms = 200,
 				},
+			},
+			sources = {
+				default = { "lsp", "path", "snippets", "buffer" },
+				cmdline = {},
 			},
 		},
 	},
