@@ -10,7 +10,6 @@ return {
 				{ "<leader>f", group = "Telescope" },
 				{ "<leader>g", group = "Git" },
 				{ "<leader>s", group = "Split" },
-				{ "<leader>t", group = "Trouble & Terminal" },
 			},
 		})
 	end,

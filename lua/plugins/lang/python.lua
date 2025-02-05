@@ -1,13 +1,13 @@
 return {
 	ft = "python",
-	root = {
-		"pyproject.toml",
-		"setup.py",
-		"setup.cfg",
-		"requirements.txt",
-		"Pipfile",
-		"pyrightconfig.json",
-	},
+	-- root = {
+	-- 	"pyproject.toml",
+	-- 	"setup.py",
+	-- 	"setup.cfg",
+	-- 	"requirements.txt",
+	-- 	"Pipfile",
+	-- 	"pyrightconfig.json",
+	-- },
 	{
 		"nvim-treesitter/nvim-treesitter",
 		opts = function(_, opts)

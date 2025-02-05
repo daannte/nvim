@@ -1,7 +1,20 @@
 local themes = {
 	{
-		"RRethy/base16-nvim",
+		"comfysage/evergarden",
 		lazy = false,
+		priority = 1000,
+		opts = {
+			variant = "hard",
+			overrides = {},
+		},
+		config = function(_, opts)
+			require("evergarden").setup(opts)
+			vim.cmd.colorscheme("evergarden")
+		end,
+	},
+	{
+		"RRethy/base16-nvim",
+		lazy = true,
 		priority = 1000,
 		config = function()
 			vim.cmd.colorscheme("base16-black-metal-gorgoroth")
