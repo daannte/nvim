@@ -32,15 +32,10 @@ return {
 			vim.api.nvim_create_autocmd("LspAttach", {
 				callback = function(args)
 					local client = vim.lsp.get_client_by_id(args.data.client_id)
-					vim.keymap.set("n", "gr", "<cmd>Telescope lsp_references<cr>", { silent = true })
-					vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { silent = true })
+					-- vim.keymap.set("n", "gr", "<cmd>Telescope lsp_references<cr>", { silent = true })
+					-- vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { silent = true })
 					vim.keymap.set("n", "gf", "<cmd>lua vim.diagnostic.open_float()<cr>", { silent = true })
 
-					if client.supports_method("textDocument/definition") then
-						vim.keymap.set("n", "gd", function()
-							require("telescope.builtin").lsp_definitions({ reuse_win = true })
-						end, { silent = true })
-					end
 					if client.supports_method("textDocument/signatureHelp") then
 						vim.keymap.set("n", "gK", vim.lsp.buf.signature_help, { silent = true })
 						vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, { silent = true })

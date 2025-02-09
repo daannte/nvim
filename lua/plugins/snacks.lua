@@ -14,7 +14,6 @@ return {
 		},
 		picker = {
 			layout = {
-				preset = "dropdown",
 				preview = false,
 				cycle = false,
 			},
@@ -60,7 +59,7 @@ return {
 	},
 	keys = {
 		{
-			"<leader>lg",
+			"<leader>gg",
 			function()
 				Snacks.lazygit()
 			end,
@@ -86,6 +85,28 @@ return {
 				Snacks.picker.grep()
 			end,
 			desc = "Grep",
+		},
+		{
+			"<leader>e",
+			function()
+				Snacks.explorer()
+			end,
+			desc = "File Explorer",
+		},
+		{
+			"gd",
+			function()
+				Snacks.picker.lsp_definitions()
+			end,
+			desc = "Goto Definition",
+		},
+		{
+			"gr",
+			function()
+				Snacks.picker.lsp_references()
+			end,
+			nowait = true,
+			desc = "References",
 		},
 	},
 }
