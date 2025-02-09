@@ -56,6 +56,13 @@ return {
 		bigfile = { enabled = true },
 		quickfile = { enabled = true },
 		scroll = { enabled = true },
+		---@type table<string, snacks.win.Config>
+		styles = {
+			zen = {
+				relative = "editor",
+				backdrop = { transparent = false, blend = 99 },
+			},
+		},
 	},
 	keys = {
 		{
@@ -106,6 +113,13 @@ return {
 				Snacks.picker.lsp_references()
 			end,
 			nowait = true,
+			desc = "References",
+		},
+		{
+			"<leader>z",
+			function()
+				Snacks.zen()
+			end,
 			desc = "References",
 		},
 	},
