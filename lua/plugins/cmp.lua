@@ -52,6 +52,9 @@ return {
 					border = "solid",
 					draw = {
 						treesitter = { "lsp" },
+						columns = {
+							{ "kind_icon", "label", gap = 3 },
+						},
 					},
 				},
 				documentation = {

@@ -1,7 +1,18 @@
 local themes = {
 	{
+		{
+			"rjshkhr/shadow.nvim",
+			lazy = false,
+			priority = 1000,
+			config = function()
+				vim.opt.termguicolors = true
+				vim.cmd.colorscheme("shadow")
+			end,
+		},
+	},
+	{
 		"comfysage/evergarden",
-		lazy = false,
+		lazy = true,
 		priority = 1000,
 		opts = {
 			variant = "hard",
