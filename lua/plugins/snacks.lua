@@ -94,6 +94,13 @@ return {
 			desc = "Grep",
 		},
 		{
+			"<leader>ft",
+			function()
+				Snacks.picker.todo_comments()
+			end,
+			desc = "Todo",
+		},
+		{
 			"<leader>e",
 			function()
 				Snacks.explorer()

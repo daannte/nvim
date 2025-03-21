@@ -2,8 +2,8 @@ local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
 -- Keep cursor centered when scrolling
-map("n", "<C-u>", "<C-u>zz", opts)
-map("n", "<C-d>", "<C-d>zz", opts)
+-- map("n", "<C-u>", "<C-u>zz", opts)
+-- map("n", "<C-d>", "<C-d>zz", opts)
 
 -- Split windows
 map("n", "<leader>sh", ":split<cr>", opts) -- Horizontal split
