@@ -1,8 +1,18 @@
 -- https://neovim.io/doc/user/lsp.html#lsp
 
--- TODO: Get path to LSP folder and loop over files instead, will make it automatic
--- so i dont have to manual add them here
-vim.lsp.enable({ "luals", "basedpyright", "ruff", "ts_ls", "tailwindcss" })
+local lsp_dir = vim.fn.stdpath("config") .. "/lsp"
+local lsps = {}
+
+for _, file in ipairs(vim.fn.globpath(lsp_dir, "*.lua", false, true)) do
+  local name = file:match("([^/\\]+)%.lua$")
+  if name then
+    table.insert(lsps, name)
+  end
+end
+
+vim.lsp.enable(lsps)
+
+
 
 -- Diagnostics
 
