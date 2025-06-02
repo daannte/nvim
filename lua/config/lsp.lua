@@ -12,8 +12,6 @@ end
 
 vim.lsp.enable(lsps)
 
-
-
 -- Diagnostics
 
 ---@type vim.diagnostic.Opts
@@ -27,6 +25,7 @@ local config = {
     }
   },
   virtual_text = { current_line = true },
+  severity_sort = true
 }
 vim.diagnostic.config(config)
 
@@ -47,8 +46,18 @@ vim.api.nvim_create_autocmd('LspAttach', {
         end
       end
     })
-    -- TODO: Make keymaps here
+
     -- Lsp Keymaps
+
+    local keymap = vim.keymap.set
+    local lsp = vim.lsp
+    local opts = { silent = true }
+    local function opt(desc, others)
+      return vim.tbl_extend("force", opts, { desc = desc }, others or {})
+    end
+
+    keymap("n", "gf", vim.diagnostic.open_float, opt("Open diagnostic in float"))
+    keymap("n", "<Leader>ca", lsp.buf.code_action, opt("Code Action"))
   end,
 })
 
