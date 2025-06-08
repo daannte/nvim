@@ -53,7 +53,7 @@ local themes = {
     },
     config = function(_, opts)
       require("kanso").setup(opts)
-      vim.cmd.colorscheme("kanso")
+      vim.cmd.colorscheme("kanso-zen")
     end
   }
 }
