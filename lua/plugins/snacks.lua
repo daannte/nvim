@@ -5,9 +5,7 @@ return {
   dependencies = {
     "nvim-tree/nvim-web-devicons",
   },
-  ---@type snacks.Config
   opts = {
-    ---@class snacks.lazygit.Config: snacks.terminal.Opts
     lazygit = {
       config = {
         gui = {
@@ -59,7 +57,6 @@ return {
     bigfile = { enabled = true },
     quickfile = { enabled = true },
     scroll = { enabled = true },
-    ---@type table<string, snacks.win.Config>
     styles = {
       zen = {
         relative = "editor",
