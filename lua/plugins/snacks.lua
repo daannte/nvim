@@ -6,13 +6,6 @@ return {
     "nvim-tree/nvim-web-devicons",
   },
   opts = {
-    lazygit = {
-      config = {
-        gui = {
-          nerdFontsVersion = "",
-        },
-      },
-    },
     picker = {
       layout = {
         preview = false,
@@ -65,20 +58,6 @@ return {
     },
   },
   keys = {
-    {
-      "<leader>gg",
-      function()
-        Snacks.lazygit()
-      end,
-      desc = "Lazygit",
-    },
-    {
-      "<leader>gl",
-      function()
-        Snacks.lazygit.log()
-      end,
-      desc = "Lazygit logs",
-    },
     {
       "<leader>ff",
       function()
