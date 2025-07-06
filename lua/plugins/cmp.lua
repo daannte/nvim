@@ -25,6 +25,7 @@ return {
   {
     "saghen/blink.cmp",
     event = "InsertEnter",
+    version = '1.*',
     opts = {
       enabled = function()
         return vim.bo.buftype == "" and vim.b.completion ~= false
