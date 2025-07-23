@@ -1,54 +1,57 @@
+local o, opt, g = vim.o, vim.opt, vim.g
+
 -- Set <space> as the leader
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+g.mapleader = " "
+g.maplocalleader = " "
 
 -- Use indentation of 2 spaces
-vim.opt.shiftwidth = 2
-vim.opt.tabstop = 2
-vim.opt.expandtab = true
+o.shiftwidth = 2
+o.tabstop = 2
+o.expandtab = true
 
 -- Search Settings
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
+o.ignorecase = true
+o.smartcase = true
 
 -- Cursor Settings
-vim.opt.cursorline = false
-vim.opt.scrolloff = 8
-vim.opt.sidescrolloff = 8
+o.cursorline = true
+opt.cursorlineopt = { "number" }
+o.scrolloff = 8
+o.sidescrolloff = 8
 
 -- Use System Clipboard
-vim.opt.clipboard = "unnamedplus"
+o.clipboard = "unnamedplus"
 
-vim.opt.undofile = true
-vim.opt.wrap = false
+o.undofile = true
+o.wrap = false
 
 -- Disable some chars, makes it more minimal
-vim.opt.fillchars = {
-	eob = " ",
-	fold = " ",
-	horiz = " ",
-	horizup = " ",
-	horizdown = " ",
-	vert = " ",
-	vertleft = " ",
-	vertright = " ",
-	verthoriz = " ",
+opt.fillchars = {
+  eob = " ",
+  fold = " ",
+  horiz = " ",
+  horizup = " ",
+  horizdown = " ",
+  vert = " ",
+  vertleft = " ",
+  vertright = " ",
+  verthoriz = " ",
 }
 
 -- Status line
-vim.opt.laststatus = 0
-vim.opt.cmdheight = 0
-vim.opt.ruler = false
-vim.opt.showmode = false
+o.laststatus = 0
+o.cmdheight = 0
+o.ruler = false
+o.showmode = false
 
 -- Splitting windows on the right and/or below
-vim.opt.splitright = true
-vim.opt.splitbelow = true
+o.splitright = true
+o.splitbelow = true
 
 -- Completion options
-vim.opt.completeopt = "menuone,noselect"
+o.completeopt = "menuone,noselect"
 
-vim.opt.signcolumn = "yes:2"
+o.signcolumn = "yes:2"
 
 -- Disable Mouse
-vim.opt.mouse = ""
+o.mouse = ""
