@@ -50,6 +50,7 @@ local themes = {
     priority = 1000,
     opts = {
       bold = false,
+      italics = false,
     },
     config = function(_, opts)
       require("kanso").setup(opts)
