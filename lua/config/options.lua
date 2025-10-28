@@ -4,6 +4,10 @@ local o, opt, g = vim.o, vim.opt, vim.g
 g.mapleader = " "
 g.maplocalleader = " "
 
+-- Line numbers
+o.number = true
+o.relativenumber = true
+
 -- Use indentation of 2 spaces
 o.shiftwidth = 2
 o.tabstop = 2
@@ -51,7 +55,7 @@ o.splitbelow = true
 -- Completion options
 o.completeopt = "menuone,noselect"
 
-o.signcolumn = "yes:2"
+o.signcolumn = "yes:1"
 
 -- Disable Mouse
 o.mouse = ""

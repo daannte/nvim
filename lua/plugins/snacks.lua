@@ -7,6 +7,7 @@ return {
   },
   opts = {
     picker = {
+      enabled = false,
       layout = {
         preview = false,
         cycle = false,
@@ -59,47 +60,11 @@ return {
   },
   keys = {
     {
-      "<leader>ff",
-      function()
-        Snacks.picker.files()
-      end,
-      desc = "Find Files",
-    },
-    {
-      "<leader>fg",
-      function()
-        Snacks.picker.grep()
-      end,
-      desc = "Grep",
-    },
-    {
-      "<leader>ft",
-      function()
-        Snacks.picker.todo_comments()
-      end,
-      desc = "Todo",
-    },
-    {
       "<leader>e",
       function()
         Snacks.explorer()
       end,
       desc = "File Explorer",
-    },
-    {
-      "gd",
-      function()
-        Snacks.picker.lsp_definitions()
-      end,
-      desc = "Goto Definition",
-    },
-    {
-      "gr",
-      function()
-        Snacks.picker.lsp_references()
-      end,
-      nowait = true,
-      desc = "References",
     },
     {
       "<leader>z",

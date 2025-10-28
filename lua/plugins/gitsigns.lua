@@ -32,14 +32,14 @@ return {
     opts = {
       attach_to_untracked = false,
       signcolumn = true,
-      signs = {
-        add = { text = "++" },
-        change = { text = "::" },
-        delete = { text = "--" },
-        changedelete = { text = "~~" },
-        topdelete = { text = "xx" },
-        untracked = { text = ".." },
-      },
+      -- signs = {
+      --   add = { text = "++" },
+      --   change = { text = "::" },
+      --   delete = { text = "--" },
+      --   changedelete = { text = "~~" },
+      --   topdelete = { text = "xx" },
+      --   untracked = { text = ".." },
+      -- },
       update_debounce = 500,
     }
   }

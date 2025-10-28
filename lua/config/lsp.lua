@@ -25,6 +25,7 @@ local config = {
     }
   },
   virtual_text = { current_line = true },
+  underline = false,
   severity_sort = true
 }
 vim.diagnostic.config(config)
