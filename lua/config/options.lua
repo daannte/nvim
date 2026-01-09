@@ -5,8 +5,8 @@ g.mapleader = " "
 g.maplocalleader = " "
 
 -- Line numbers
-o.number = true
-o.relativenumber = true
+o.number = false
+o.relativenumber = false
 
 -- Use indentation of 2 spaces
 o.shiftwidth = 2

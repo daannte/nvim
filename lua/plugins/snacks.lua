@@ -12,6 +12,15 @@ return {
         preview = false,
         cycle = false,
       },
+      sources = {
+        explorer = {
+          ignored = true,
+          exclude = {
+            "node_modules",
+            "__pycache__"
+          }
+        }
+      },
     },
     ---@class snacks.dashboard.Config
     dashboard = {
