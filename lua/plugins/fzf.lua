@@ -14,7 +14,8 @@ return {
     keymap = {
       fzf = {
         ["ctrl-d"] = "half-page-down",
-        ["ctrl-u"] = "half-page-up"
+        ["ctrl-u"] = "half-page-up",
+        ["ctrl-q"] = "select-all+accept"
       }
     },
     defaults = {
