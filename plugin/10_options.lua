@@ -44,7 +44,7 @@ opt.fillchars = {
 
 -- Status line
 o.laststatus = 0
-o.cmdheight = 0
+o.cmdheight = 1
 o.ruler = false
 o.showmode = false
 

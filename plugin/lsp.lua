@@ -1,3 +1,5 @@
+vim.pack.add({ "https://github.com/neovim/nvim-lspconfig" })
+
 -- https://neovim.io/doc/user/lsp.html#lsp
 
 local lsp_dir = vim.fn.stdpath("config") .. "/lsp"
