@@ -80,7 +80,7 @@ return {
       function()
         Snacks.zen()
       end,
-      desc = "References",
+      desc = "Zen Mode",
     },
   },
 }
