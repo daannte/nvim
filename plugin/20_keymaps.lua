@@ -27,3 +27,14 @@ map("n", "dw", 'vb"_d', opts)
 
 -- Select All
 map("n", "<C-a>", "gg<S-v>G", opts)
+
+-- Jump to start and end of line using the home row keys
+vim.keymap.set('', 'H', '^')
+vim.keymap.set('', 'L', '$')
+
+-- Always center search results
+vim.keymap.set('n', 'n', 'nzz', { silent = true })
+vim.keymap.set('n', 'N', 'Nzz', { silent = true })
+vim.keymap.set('n', '*', '*zz', { silent = true })
+vim.keymap.set('n', '#', '#zz', { silent = true })
+vim.keymap.set('n', 'g*', 'g*zz', { silent = true })
