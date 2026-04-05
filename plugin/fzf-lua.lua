@@ -35,6 +35,10 @@ vim.keymap.set("n", "<leader>fg", function()
   FzfLua.live_grep()
 end)
 
+vim.keymap.set("n", "<leader>fb", function()
+  FzfLua.buffers()
+end)
+
 vim.keymap.set("n", "gd", function()
   FzfLua.lsp_definitions()
 end)
