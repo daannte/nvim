@@ -42,7 +42,3 @@ end)
 vim.keymap.set("n", "gd", function()
   FzfLua.lsp_definitions()
 end)
-
-vim.keymap.set("n", "gr", function()
-  FzfLua.lsp_references()
-end)

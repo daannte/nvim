@@ -14,7 +14,7 @@ vim.keymap.set("n", "<leader>e", function()
   local path = vim.fn.fnamemodify(bufname, ":p")
 
   if path and vim.uv.fs_stat(path) then
-    MiniFiles.open()
+    MiniFiles.open(path)
   end
 end)
 

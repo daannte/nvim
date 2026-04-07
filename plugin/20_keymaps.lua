@@ -7,10 +7,6 @@ map("n", "<leader>sv", ":vsplit<cr>", opts) -- Vertical split
 map("n", "<leader>sx", ":close<cr>", opts)  -- Close current split
 map("n", "<leader>se", "<C-w>=<cr>", opts)  -- Resize equally
 
--- Buffer Manipulation
-map("n", "<Tab>", ":bnext<cr>", opts)   -- Switch to next buffer
-map("n", "<S-Tab>", ":bprev<cr>", opts) -- Switch to previous buffer
-
 -- Remove highlight after searching
 map("n", "<leader>nh", ":nohl<cr>", opts)
 
@@ -33,8 +29,8 @@ vim.keymap.set('', 'H', '^')
 vim.keymap.set('', 'L', '$')
 
 -- Always center search results
-vim.keymap.set('n', 'n', 'nzz', { silent = true })
-vim.keymap.set('n', 'N', 'Nzz', { silent = true })
-vim.keymap.set('n', '*', '*zz', { silent = true })
-vim.keymap.set('n', '#', '#zz', { silent = true })
-vim.keymap.set('n', 'g*', 'g*zz', { silent = true })
+vim.keymap.set('n', 'n', 'nzz', opts)
+vim.keymap.set('n', 'N', 'Nzz', opts)
+vim.keymap.set('n', '*', '*zz', opts)
+vim.keymap.set('n', '#', '#zz', opts)
+vim.keymap.set('n', 'g*', 'g*zz', opts)
